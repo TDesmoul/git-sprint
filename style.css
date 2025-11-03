@@ -15,3 +15,15 @@ h1, h2, h3 {
   width: 90vw;
   margin: auto;
 }
+
+.section {
+  display: flex;
+  gap: 2rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.section img {
+  width: 150px;
+}
