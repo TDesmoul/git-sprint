@@ -12,6 +12,25 @@
         <img src="https://avatars.githubusercontent.com/u/212519930?v=4" alt="">
         <p>My name is Bob. Exited about learning Git.</p>
       </div>
+
+      <h1>API testing</h1>
+      <div class="section">
+        <button id="chuck-btn">New quote</button>
+        <div id="chuck-quote">...</div>
+      </div>
     </div>
+    <script>
+      const chuckBtn = document.getElementById("chuck-btn")
+      const chuckQuote = document.getElementById("chuck-quote")
+
+      chuckBtn.addEventListener('click', (event) => {
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.value);
+          chuckQuote.innerText = data.value;
+        })
+      })
+    </script>
   </body>
 </html>
